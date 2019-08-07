@@ -11,7 +11,10 @@ function displayResults(inpt) {
 
 
 function validateInput(inpt) {
-    if(inpt > 50 || inpt < 1) {
+    if (inpt < 1) {
+        alert('Didn\'t choose anything? Here\'s three dog images.')
+        getDogImage(3);
+    } else if (inpt > 50) {
         console.log(inpt);
         alert('Choose a number between 1 and 50');
     renderLanding();
